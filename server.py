@@ -7,8 +7,12 @@ def index():
     return 'Hello World'
 
 def make_app():
-    
-    app.run()
+    app.debug = True
+    app.port = 8080
+
+    return app
+
 
 if __name__ == '__main__':
-    make_app()
+    app = make_app()
+    app.run()
